@@ -1,10 +1,16 @@
 ARG py_version
 FROM pytorch-base:1.1.0-cpu-py$py_version
 
+RUN pip install cython 
+RUN pip install dill 
+RUN pip install scikit-image
+
 LABEL com.amazonaws.sagemaker.capabilities.accept-bind-to-port=true
 
 # Copy workaround script for incorrect hostname
 COPY lib/changehostname.c /
+COPY SPADE /SPADE
+COPY default_rico.txt /default_rico.txt
 COPY lib/start_with_right_hostname.sh /usr/local/bin/start_with_right_hostname.sh
 RUN chmod +x /usr/local/bin/start_with_right_hostname.sh
 

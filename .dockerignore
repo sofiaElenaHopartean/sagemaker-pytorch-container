@@ -1,0 +1,9 @@
+SPADE/.vscode
+SPADE/checkpoints
+SPADE/datasets/coco_stuff
+SPADE/datasets/rico
+SPADE/docs
+SPADE/.gitignore
+SPADE/LICENSE.md
+SPADE/README.md
+SPADE/trained_models

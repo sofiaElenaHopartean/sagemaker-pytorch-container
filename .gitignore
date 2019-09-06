@@ -11,3 +11,7 @@ build
 .coverage
 .tox/
 test/resources/local_mode_lock
+
+SPADE/*
+SPADE
+=0.3.1
